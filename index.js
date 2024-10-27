@@ -1,6 +1,7 @@
 const myLibrary = [];
 
 const form = document.getElementById("inputForm");
+const addBookButton = document.getElementById("addBook");
 
 function Book(name, author, pages) {
   this.name = name;
@@ -11,6 +12,10 @@ function Book(name, author, pages) {
 
 const submit = document.querySelector("#submit");
 
+addBookButton.addEventListener("click", function () {
+  form.style.display = "block"; // Show the form when the button is clicked
+  addBookButton.style.display = "none"; // Hide the Add Book button
+});
 form.addEventListener("submit", function (event) {
   event.preventDefault();
 
