@@ -22,6 +22,8 @@ form.addEventListener("submit", function (event) {
   myLibrary.push(entry);
 
   alert("Book added");
+
+  this.reset();
 });
 
 console.log(myLibrary);
